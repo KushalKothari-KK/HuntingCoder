@@ -20,15 +20,13 @@ const Blog = ({ allBlogs }) => {
       <main className={styles.main}>
         <div className="blogs">
           {blogs?.map((blogsItems) => (
-            <div key={blogsItems.title} className={styles.blogItem}>
-              <Link href={`/blogpost/${blogsItems.slug}`}>
+            <div key={blogsItems?.title} className={styles.blogItem}>
+              <Link href={`/blogpost/${blogsItems?.slug}`}>
                 <a>
-                  <h3>{blogsItems.title}</h3>
+                  <h3>{blogsItems?.title}</h3>
                 </a>
               </Link>
-              <p className={styles.blogItemP}>
-                {blogsItems.content.substr(0, 140)}...
-              </p>
+              <p className={styles.blogItemP}>{blogsItems?.metadesc}...</p>
             </div>
           ))}
         </div>

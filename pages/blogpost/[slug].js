@@ -20,12 +20,17 @@ const Slug = ({ blogResp }) => {
   //       .then((parsedData) => setBlogData(parsedData));
   //   }
   // }, [slug]);
+  const createMarkup = (content) => {
+    return { __html: content };
+  };
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h1>{blogData?.title}</h1>
         <hr />
-        <div>{blogData?.content}</div>
+        {blogData && (
+          <div dangerouslySetInnerHTML={createMarkup(blogData?.content)}></div>
+        )}
       </main>
     </div>
   );
