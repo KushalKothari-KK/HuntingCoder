@@ -42,7 +42,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .title,
@@ -130,5 +130,30 @@
 }
 
 .heroBanner img {
-  border-radius: 5px;
+  width: 157px;
+  border-radius: 50%;
+}
+
+.blogsheading {
+  font-size: 2.5rem;
+}
+
+.blogsItems h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.blogsItems p {
+  margin: 16px 0;
+  margin-top: 3px;
+}
+
+.btn {
+  color: white;
+  background: black;
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }

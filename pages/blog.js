@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import * as fs from "fs";
+import { useRouter } from "next/router";
 
 // step 1: Collect all the files from blogdata directory
 // step 2: Iterate through them and display them
 
 const Blog = ({ allBlogs }) => {
+  const router = useRouter();
   const [blogs, setBlogs] = useState(allBlogs);
   // Client Side Rendering not effecient for SEO
   // useEffect(() => {
@@ -14,7 +16,9 @@ const Blog = ({ allBlogs }) => {
   //     .then((data) => data.json())
   //     .then((parsedData) => setBlogs(parsedData));
   // }, []);
-
+  const changeRoute = (href) => {
+    router.push(href);
+  };
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -27,6 +31,12 @@ const Blog = ({ allBlogs }) => {
                 </a>
               </Link>
               <p className={styles.blogItemP}>{blogsItems?.metadesc}...</p>
+              <button
+                className={styles.btn}
+                onClick={() => changeRoute(`/blogpost/${blogsItems?.slug}`)}
+              >
+                Read More
+              </button>
             </div>
           ))}
         </div>

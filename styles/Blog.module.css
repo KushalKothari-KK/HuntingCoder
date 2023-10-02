@@ -19,3 +19,13 @@
 .blogItemP {
   max-width: 45vw;
 }
+
+.btn {
+  color: white;
+  background: black;
+  padding: 7px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+}
