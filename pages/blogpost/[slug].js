@@ -44,6 +44,12 @@ export async function getStaticPaths() {
       { params: { slug: "how-to-learn-react" } },
       { params: { slug: "how-to-learn-nextjs" } },
       { params: { slug: "how-to-learn-javascript" } },
+      { params: { slug: "how-to-learn-c" } },
+      { params: { slug: "how-to-learn-css" } },
+      { params: { slug: "how-to-learn-html" } },
+      { params: { slug: "how-to-learn-jest" } },
+      { params: { slug: "how-to-learn-jquery" } },
+      { params: { slug: "how-to-learn-node" } },
     ],
     fallback: false,
   };

@@ -157,3 +157,15 @@
   border-radius: 6px;
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .blogsheading {
+    font-size: 1.2rem;
+  }
+  .blogsItems h3 {
+    font-size: 1rem;
+  }
+}
